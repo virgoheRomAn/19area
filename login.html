@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="d-height" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="wap-font-scale" content="no">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/jBox.css">
+    <link rel="stylesheet" href="css/base.min.css">
+    <link rel="stylesheet" href="css/user.min.css">
+</head>
+<body class="user-bg overflow-hidden">
+<div class="wrap overflow">
+    <div class="head-box">
+        <div class="header background">
+            <div class="container">
+                <div class="row">
+                    <div class="logo-box">
+                        <a class="logo" href="index.html"><img src="img/logo.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cont-box">
+        <div class="user-box">
+            <div class="user-cont radius">
+                <div class="user-title"><span>用户登录</span></div>
+                <div class="user-form">
+                    <div class="item">
+                        <label class="form-input clean border gray big block before-text">
+                            <span><i class="fb-sprite icon-mobile"></i></span>
+                            <input type="text" placeholder="请输入注册手机号">
+                            <label class="clean-btn" href="javascript:;">&times;</label>
+                        </label>
+                    </div>
+                    <div class="item">
+                        <label class="form-input clean border gray big block before-text">
+                            <span><i class="fb-sprite icon-password"></i></span>
+                            <input type="password" placeholder="请输入密码">
+                            <label class="clean-btn" href="javascript:;">&times;</label>
+                        </label>
+                    </div>
+                    <div class="intro">
+                        <label class="fb-check-box">
+                            <em>
+                                <i class="fb-sprite icon-checked"></i>
+                                <input type="checkbox">
+                            </em>
+                            <span>记住密码</span>
+                        </label>
+                    </div>
+                    <div class="btn big">
+                        <a class="fb-btn big background blue" href="javascript:;">登录</a>
+                    </div>
+                </div>
+            </div>
+            <div class="user-intro">我是商家，去 <a class="tc-blue tm-uline" href="login.html">商家登录</a></div>
+            <div class="fs-15 mt-15">
+                <a href="register.html" class="fl tc-fff">免费注册</a>
+                <a href="forget.html" class="fr tc-fff tm-uline">忘记密码？</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.jbox.js"></script>
+<script src="js/common.js"></script>
+<script src="js/base.js"></script>
+<script>
+    $(function () {
+        //记住密码
+        FB.formChecked(".fb-check-box");
+    })
+</script>
+
+</body>
+</html>

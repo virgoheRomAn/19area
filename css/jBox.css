@@ -1,0 +1,470 @@
+html, body {
+    position: relative;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+    visibility: visible;
+    overflow: hidden;
+}
+
+.j-disk {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+}
+
+.j-disk {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.j-disk-confirm {
+    background: rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000, endcolorstr=#7F000000) \9;
+}
+
+.j-disk-alert {
+    background: transparent;
+}
+
+.j-disk-confirm .j-container {
+    display: block;
+    padding: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10002;
+    margin: 0 0 0 -280px;
+    background: #FFFFFF;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px rgba(175, 175, 175, .6);
+    -moz-box-shadow: 0 0 5px rgba(175, 175, 175, .6);
+    -o-box-shadow: 0 0 5px rgba(175, 175, 175, .6);
+    box-shadow: 0 0 5px rgba(175, 175, 175, .6);
+}
+
+.j-title {
+    position: relative;
+    margin: 0;
+    padding: 0 0 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666666;
+    /*cursor: move;*/
+    text-align: center;
+}
+
+.j-title span {
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.j-title span.big {
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+.j-disk-close {
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    float: right;
+    color: #666666;
+    font-size: 22px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: normal;
+    top: 7px;
+    right: 10px;
+    position: absolute;
+    font-family: "宋体", arial, helvetica, sans-serif;
+}
+
+.j-content {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    padding: 5px 20px 20px;
+    line-height: 1.2;
+}
+
+.j-disk-text {
+    position: relative;
+    display: block;
+    /*padding: 10px 0;*/
+    margin: auto;
+    text-align: center;
+}
+
+.j-disk-text .j-disk-t {
+    position: relative;
+    /*top: -1px;*/
+}
+
+.j-disk-alert .j-disk-text .j-disk-t{
+    font-size: 24px;
+}
+
+.j-disk-img {
+    text-align: left;
+    padding: 5px 0 5px 70px;
+}
+
+.j-disk-img.j-img-v {
+    padding: 0;
+}
+
+.j-disk-img.j-img-v i.j-disk-icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto 10px;
+}
+
+i.j-disk-icon {
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -25px;
+}
+
+i.j-disk-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.j-disk-prompt {
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    margin: auto;
+}
+
+.j-disk-prompt label {
+    display: block;
+    line-height: 20px;
+    font-size: 14px;
+    margin: 5px auto 25px;
+    color: #878787;
+    text-align: center;
+}
+
+.j-disk-prompt a {
+    display: inline-block;
+    float: right;
+    width: 74px;
+    background: #0fadff;
+    border: 1px solid #0fadff;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.j-disk-prompt span {
+    display: inline-block;
+    width: 124px;
+    padding: 0 5px;
+    float: left;
+    border: 1px solid #aaa;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.j-disk-prompt span input {
+    width: 100%;
+    background: transparent;
+    border: 0 none;
+}
+
+.j-btn {
+    display: block;
+    width: 100%;
+    margin: 20px auto 0;
+}
+
+.j-btn.small {
+    width: 150px;
+}
+
+.j-btn.big {
+    width: 280px;
+}
+
+.j-btn.big a {
+    height: 48px;
+    line-height: 48px;
+    font-size: 1.8rem;
+}
+
+.j-btn.j-btn-one a {
+    width: 100%;
+}
+
+.j-btn a {
+    position: relative;
+    display: block;
+    width: 45%;
+    height: 46px;
+    line-height: 46px;
+    color: #FFF;
+    font-size: 1.6rem;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+a.j-ensure {
+    background: #0bf;
+    color: #FFFFFF;
+    float: left;
+}
+
+a.j-cancel {
+    background: #D8D8D8;
+    border: 1px solid #B3B3B3;
+    color: #666;
+    float: right;
+}
+
+.j-disk-alert .j-container {
+    display: block;
+    padding: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10002;
+    margin: -75px 0 0 -150px;
+    background: rgba(0, 0, 0, 0.8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#C8000000, endcolorstr=#C8000000) \9;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.j-disk-alert .j-content {
+    color: #FFFFFF;
+    padding: 25px 40px;
+}
+
+:root .j-container,
+:root .j-new-alert {
+    filter: none;
+}
+
+.j-disk.j-new-alert {
+    background: rgba(0, 0, 0, 0.3);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#4C000000, endcolorstr=#4C000000) \9;
+}
+
+.j-disk.j-new-alert .j-container {
+    background: #ffffff;
+    filter: none \9;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.j-disk.j-new-alert .j-content {
+    color: #333333;
+}
+
+/*标准显示模式-v1.1*/
+.j-box-normal .j-title {
+    border-bottom: 1px solid #dddddd;
+    padding: 0 20px;
+}
+
+.j-box-normal .j-title span {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.j-box-normal .j-title .j-disk-close {
+    right: 20px;
+    top: 50%;
+    margin-top: -14px;
+    font-size: 28px;
+}
+
+.j-box-normal .j-content {
+    padding: 0;
+}
+
+.j-box-normal .j-disk-text {
+    padding: 30px;
+}
+
+.j-box-normal .j-btn {
+    padding: 32px 0;
+    margin: auto;
+    border-top: 1px solid #dddddd;
+    text-align: center;
+}
+
+.j-box-normal .j-btn a {
+    float: none;
+    display: inline-block;
+    width: 122px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 20px;
+}
+
+.j-box-normal a.j-ensure {
+    background: #0bf;
+    border: 1px solid #0bf;
+}
+
+.j-box-normal a.j-cancel {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+/***************************************************************************************/
+/********************--------------------分割线--------------------********************/
+/***************************************************************************************/
+/*j弹窗动画*/
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+
+@-webkit-keyframes j-alert-ani {
+    0% {
+        -webkit-transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes j-alert-ani {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.j-alert-ani {
+    -webkit-animation-name: j-alert-ani;
+    animation-name: j-alert-ani;
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px)
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+        transform: translateX(-5px)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(5);
+        -ms-transform: translateX(5px);
+        transform: translateX(5px)
+    }
+}
+
+.shake {
+    -webkit-animation-name: shake;
+    animation-name: shake
+}
+
+@-webkit-keyframes rollIn {
+    0% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes rollIn {
+    0% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
